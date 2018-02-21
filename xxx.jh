@@ -1,0 +1,6 @@
+entity Gajaka {
+	regionName String
+}
+entity Gajaka2 {
+	regionName String
+}
