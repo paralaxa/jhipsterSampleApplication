@@ -1,0 +1,58 @@
+<div>
+    <h2>
+        <span>Gajaka 2 S</span>
+        <button class="btn btn-primary float-right jh-create-entity create-gajaka-2" [routerLink]="['/', { outlets: { popup: ['gajaka-2-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span >
+            Create new Gajaka 2
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="gajaka2S">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Region Name</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let gajaka2 of gajaka2S ;trackBy: trackId">
+                <td><a [routerLink]="['../gajaka-2', gajaka2.id ]">{{gajaka2.id}}</a></td>
+                <td>{{gajaka2.regionName}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../gajaka-2', gajaka2.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'gajaka-2/'+ gajaka2.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'gajaka-2/'+ gajaka2.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
