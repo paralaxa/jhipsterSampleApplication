@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="id">
+            <h2><span>Id</span> {{ id.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Valid From</span></dt>
+                <dd>
+                    <span>{{ id.validFrom }}</span>
+                </dd>
+                <dt><span>Valid To</span></dt>
+                <dd>
+                    <span>{{ id.validTo }}</span>
+                </dd>
+                <dt><span>Consumer Id</span></dt>
+                <dd>
+                    <div *ngIf="id.consumerId">
+                        <a [routerLink]="['/consumer', id.consumerId?.id, 'view']">{{ id.consumerId?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span>Consumer Id</span></dt>
+                <dd>
+                    <div *ngIf="id.consumerId">
+                        <a [routerLink]="['/consumer', id.consumerId?.id, 'view']">{{ id.consumerId?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/id', id.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
