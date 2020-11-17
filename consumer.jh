@@ -1,0 +1,19 @@
+entity Consumer{
+	id String
+    otherFields String
+}
+
+
+entity Id{
+	id String
+    validFrom Date
+    validTo Date
+}
+
+relationship OneToMany{
+	Consumer to Id{consumerId}
+}
+
+relationship ManyToOne{
+	Id{consumerId} to Consumer
+}
