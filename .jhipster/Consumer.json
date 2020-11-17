@@ -1,0 +1,28 @@
+{
+  "name": "Consumer",
+  "fields": [
+    {
+      "fieldName": "otherFields",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "id",
+      "otherEntityRelationshipName": "consumerId",
+      "relationshipName": "id"
+    }
+  ],
+  "changelogDate": "20201117183421",
+  "entityTableName": "consumer",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

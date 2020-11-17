@@ -1,0 +1,40 @@
+{
+  "name": "Id",
+  "fields": [
+    {
+      "fieldName": "validFrom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "validTo",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "consumer",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "consumerId",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "consumer",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "consumerId",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201117183521",
+  "entityTableName": "id",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
